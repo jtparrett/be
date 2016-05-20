@@ -1,0 +1,26 @@
+.partners
+  +list()
+  +display(flex)
+  +justify-content(center)
+  +margin(null auto)
+  +padding(60px 20px null)
+  +box-sizing(border-box)
+  +flex-wrap(wrap)
+  width: 900px
+  max-width: 100%
+
+  &__item
+    +margin(null 10px 10px)
+
+  &__image
+    +margin(null auto)
+    display: block
+    max-width: 100%
+
+  +breakpoint(large)
+    width: 500px
+
+  +breakpoint(small)
+    &__item
+      +flex(none)
+      width: calc(50% - 20px)

@@ -1,0 +1,56 @@
+.section
+  +padding(100px null)
+
+  &--center
+    text-align: center
+
+  &--contact
+    background-image: url('../images/content/contact-background.jpg')
+    background-size: cover
+    background-position: center right
+
+  &__header
+    +display(flex)
+    +align-items(center)
+    padding-bottom: 50px
+    text-align: center
+
+    &:before, &:after
+      +flex(1)
+      content: ""
+      display: block
+      height: 1px
+      background: $color-medium
+
+  &__inner
+    +margin(null 80px)
+    +gradient-text(100deg, #d9d73f, #71eb80)
+
+    &--secondary
+      +gradient-text(100deg, #cd73a4, #8d77b4)
+
+  &__title
+    +heading()
+    color: currentColor
+
+  &__sub
+    +heading()
+    color: currentColor
+    font-size: 40px
+
+  &__copy
+    +copy()
+    padding-bottom: 20px
+
+  +breakpoint(large)
+    +padding(40px null)
+
+  +breakpoint(medium)
+    &__inner
+      +margin(null 20px)
+
+    &__title
+      font-size: 32px
+
+    &__sub
+      font-size: 22px

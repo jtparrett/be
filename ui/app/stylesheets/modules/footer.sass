@@ -1,0 +1,36 @@
+.footer
+  +display(flex)
+  +justify-content(center)
+  +align-items(center)
+  +padding(20px null 75px)
+
+  &__copy
+    +copy()
+    font-size: 14px
+
+    span
+      color: #37bb9a
+
+  &__list
+    +list()
+    +display(flex)
+    margin-left: 10px
+
+  &__item
+    &:not(:last-child)
+      border-right: 1px solid #414141
+
+  &__link
+    +copy()
+    +padding(null 5px)
+    font-size: 14px
+    color: #37bb9a
+    text-decoration: none
+
+
+  +breakpoint(medium)
+    text-align: center
+    display: block
+
+    &__list
+      +justify-content(center)

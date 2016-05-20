@@ -1,0 +1,11 @@
+application/files/*
+application/config/secrets.php
+.idea
+node_modules
+.sass-cache
+compile
+*.DS_Store
+.vagrant
+sitemap.xml
+*.map
+/path/to/build/directory

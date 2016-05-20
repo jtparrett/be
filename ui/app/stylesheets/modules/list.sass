@@ -1,0 +1,58 @@
+.list
+  +list()
+  color: currentColor
+
+  &__item
+    color: currentColor
+    padding-bottom: 30px
+
+  &__copy
+    +copy()
+    color: currentColor
+    overflow: hidden
+
+  &__title
+    +copy()
+    color: currentColor
+    font-weight: 700
+    overflow: hidden
+
+  &__icon
+    +size(50px)
+    +transform(translateY(-50%) rotate(-45deg))
+    font-family: $font-base
+    font-weight: 400
+    color: #33839a
+    font-size: 30px
+    position: relative
+    overflow: hidden
+    font-weight: 700
+    border-bottom: 1px solid #fff
+    float: left
+    margin-right: 30px
+
+    span
+      +position(absolute, 50% null null 50%)
+      +transform(translateX(-50%) rotate(45deg))
+      display: block
+
+  &--right &
+    &__icon
+      +margin(null 0 null 30px)
+      +transform(translateY(-50%) rotate(45deg))
+      border-color: #000
+      float: right
+      color: #a48cc4
+
+      span
+        +transform(translateX(-50%) rotate(-45deg))
+
+  +breakpoint(large)
+    &--right &
+      &__icon
+        +margin(null 30px null 0)
+        +transform(translateY(-50%) rotate(-45deg))
+        float: left
+
+        span
+          +transform(translateX(-50%) rotate(45deg))

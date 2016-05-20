@@ -1,0 +1,83 @@
+.split
+  +display(flex)
+
+  &__item
+    +flex(none)
+    width: 50%
+
+    &--dark
+      color: $color-light
+
+      .button
+        +linear-gradient(100deg, #5689b0, #686995)
+
+      .split__header
+        +linear-gradient(64deg, #8be368, #adab30)
+
+      .split__title
+        &:nth-of-type(odd)
+          +gradient-text(100deg, #5eb9a7, #8be368)
+        &:nth-of-type(even)
+          +gradient-text(100deg, #379dcc, #5eb9a7)
+
+    &--light
+      background: #fff
+      text-align: right
+      color: #000
+
+      .button
+        +linear-gradient(101deg, #686995, #5689b0)
+
+      .split__header
+        +linear-gradient(114deg, #adab30, #ff5b5b)
+
+      .split__title
+        &:nth-of-type(odd)
+          +gradient-text(100deg, #d96da7, #ff5b5b)
+        &:nth-of-type(even)
+          +gradient-text(100deg, #75409b, #e29abb)
+
+  &__header
+    img
+      +margin(null auto)
+      display: block
+      max-width: 100%
+      width: 650px
+
+  &__wrap
+    +margin(null auto)
+    +padding(100px 40px 50px)
+    +box-sizing(border-box)
+    width: 680px
+    max-width: 100%
+    color: currentColor
+
+  &__title
+    +heading()
+    padding-bottom: 30px
+
+  &__copy
+    +copy()
+    padding-bottom: 30px
+    color: currentColor
+
+  &__rule
+    border: 0
+    height: 1px
+    background: currentColor
+    margin-bottom: 30px
+
+  +breakpoint(large)
+    display: block
+
+    &__item
+      width: auto
+
+      &--light
+        text-align: left
+
+    &__wrap
+      +padding(40px 20px)
+
+    &__title
+      font-size: 32px

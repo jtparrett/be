@@ -1,0 +1,46 @@
+.select
+  +display(flex)
+  +align-items(center)
+  position: relative
+  z-index: 1
+  background: #fff
+  margin-bottom: 20px
+  border-radius: 8px
+
+  &:after
+    +triangle(10px, #3c3e93, down)
+    margin-right: 20px
+    content: ""
+    position: relative
+    z-index: -1
+    display: block
+
+  select
+    +flex(1)
+    +appearance(none)
+    +copy()
+    +padding(15px 38px 15px 25px)
+    font-weight: 600
+    color: $color-dark
+    text-transform: uppercase
+    outline: none
+    position: relative
+    z-index: 1
+    border: 0
+    background: transparent
+    margin-right: -38px
+
+@-moz-document url-prefix() 
+  .select
+    overflow: hidden
+  .select select
+    width: 120%
+    width: -moz-calc(100% + 3em)
+    width: calc(100% + em)
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+  .select select::-ms-expand
+    display: none
+  .select select:focus::-ms-value
+    background: transparent
+    color: #222

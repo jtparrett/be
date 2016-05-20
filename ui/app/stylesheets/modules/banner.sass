@@ -1,0 +1,50 @@
+.banner
+  +padding(50px)
+  +box-sizing(border-box)
+  position: relative
+  min-height: 100vh
+  background-image: url('../images/content/banner.jpg')
+  background-size: cover
+  background-position: top right
+
+  &:after
+    +position(absolute, null null 0px 0px)
+    +size(100% 100px)
+    +linear-gradient(rgba(#000, 0), #000)
+    content: ""
+    display: block
+    z-index: 1
+
+  &__logo
+    display: block
+    width: 480px
+    max-width: 100%
+
+  &__title
+    +position(absolute, null null 50px 50px)
+    +heading()
+    +gradient-text(128deg, #71eb80, #409fcb)
+    font-size: 70px
+    z-index: 2
+
+    strong
+      font-size: 180%
+      font-weight: 400
+
+  +breakpoint(large)
+    &__logo
+      width: 300px
+
+    &__title
+      font-size: 50px
+
+  +breakpoint(medium)
+    +padding(20px)
+
+    &__logo
+      width: 200px
+
+    &__title
+      font-size: 35px
+      bottom: 20px
+      left: 20px
