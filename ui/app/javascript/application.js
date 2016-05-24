@@ -16,4 +16,8 @@ $(function() {
     BE.modules[key].init();
   });
 
+  byBehaviour('form').parsley({
+    errorsMessagesDisabled: true
+  });
+
 });

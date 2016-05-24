@@ -20,10 +20,10 @@
   <img src="app/images/content/the-butterfly-edge.svg" alt="The Butterfly Edge" class="banner__logo" />
 
   <h1 class="banner__title">A Digital<br />
-  frontier to<br />
-  <strong>reshape</strong><br />
-  an archaic<br />
-  human condition.</h1>
+    frontier to<br />
+    <strong>reshape</strong><br />
+    an archaic<br />
+    human condition.</h1>
 </header>
     <section class="section section--center">
   <div class="container">
@@ -131,16 +131,18 @@
       <p class="section__copy">Our one hour workshop aims to explore, identify and advise businesses and individuals on an array of marketing, digital and content topics. It is an opportunity to engage with an experienced marketing, digital and social media professional, to glean vital information that could make a real difference to your project, infrastructure or your entire business.</p>
       <p class="section__copy">If you are about to embark on a digital journey, then get in touch.</p>
     </div>
-    <div class="contact__form"> 
-      <input type="text" placeholder="Name" class="input" />
-      <input type="text" placeholder="Brand / Agency" class="input" />
-      <input type="email" placeholder="Email" class="input" />
-      <div class="select">
-        <select>
-          <option>Area of interest</option>
-        </select>
-      </div>
-      <button class="button">Send</button>
+    <div class="contact__form">
+      <form data-behaviour="form">
+        <input type="text" placeholder="Name" class="input" required />
+        <input type="text" placeholder="Brand / Agency" class="input" required />
+        <input type="email" placeholder="Email" class="input" required />
+        <div class="select">
+          <select>
+            <option>Area of interest</option>
+          </select>
+        </div>
+        <button class="button" type="submit">Send</button>
+      </form>
     </div>
   </div>
 
