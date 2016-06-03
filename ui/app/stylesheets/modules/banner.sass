@@ -30,10 +30,13 @@
 
   &__title
     +heading()
-    +gradient-text(128deg, #71eb80, #409fcb)
     font-size: 70px
     position: relative
     z-index: 2
+
+    span
+      +gradient-text(128deg, #71eb80, #409fcb)
+      display: inline-block
 
     strong
       font-size: 180%
