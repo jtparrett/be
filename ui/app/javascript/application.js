@@ -20,4 +20,6 @@ $(function() {
     errorsMessagesDisabled: true
   });
 
+  byBehaviour('parallax').parallax();
+  $('.banner__image').objectFit();
 });

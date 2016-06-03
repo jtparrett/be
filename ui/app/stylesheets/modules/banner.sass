@@ -6,17 +6,22 @@
   +justify-content(space-between)
   position: relative
   min-height: 100vh
-  background-image: url('../images/content/banner.jpg')
-  background-size: cover
-  background-position: top right
+  z-index: 1
+  overflow: hidden
 
   &:after
     +position(absolute, null null 0px 0px)
-    +size(100% 100px)
+    +size(100% 250px)
     +linear-gradient(rgba(#000, 0), #000)
     content: ""
     display: block
     z-index: 1
+
+  &__image
+    +position(absolute, 0px null null 0px)
+    +size(100%)
+    object-fit: cover
+    z-index: -1
 
   &__logo
     display: block
@@ -27,6 +32,8 @@
     +heading()
     +gradient-text(128deg, #71eb80, #409fcb)
     font-size: 70px
+    position: relative
+    z-index: 2
 
     strong
       font-size: 180%
