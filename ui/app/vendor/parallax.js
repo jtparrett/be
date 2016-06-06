@@ -6,6 +6,7 @@ $(function(){
     });
 
     $(window).on('scroll', update);
+    $(window).on('resize', reset);
   };
 
   function update(){
@@ -15,18 +16,31 @@ $(function(){
     });
   }
 
+  function reset(){
+    instances.forEach(function(inst){
+      inst.reset();
+    }); 
+  }
+
   var parallax = function(el){
     this.el = el;
-    this.offset = el.offset().top;
+    this.reset();
+    this.update($(window).scrollTop());
+  };
+
+  parallax.prototype.reset = function(){
+    this.offset = this.el.offset().top;
+    this.height = this.el.height();
   };
 
   parallax.prototype.update = function(scrollTop){
-    if(scrollTop < this.offset){
+    var self = this;
+    if(scrollTop + $(window).height() < this.offset || scrollTop > this.offset + this.height){
       return false;
     }
 
     this.el.css({
-      transform: 'translateY(' + scrollTop / 2 + 'px)'
+      transform: 'translateY(' + (scrollTop - self.offset) / 2 + 'px)'
     });
   };
 }(jQuery));

@@ -20,6 +20,9 @@ $(function() {
     errorsMessagesDisabled: true
   });
 
-  byBehaviour('parallax').parallax();
-  $('.banner__image').objectFit();
+  setTimeout(function(){
+    byBehaviour('parallax').parallax();
+  }, 500);
+
+  $('.banner__image, .section__image').objectFit();
 });

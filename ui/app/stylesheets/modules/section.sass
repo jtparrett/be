@@ -1,13 +1,17 @@
 .section
   +padding(100px null)
+  position: relative
+  z-index: 1
+  overflow: hidden
 
   &--center
     text-align: center
 
-  &--contact
-    background-image: url('../images/content/contact-background.jpg')
-    background-size: cover
-    background-position: center right
+  &__image
+    +position(absolute, 0px null null 0px)
+    +size(100%)
+    object-fit: cover
+    z-index: -1
 
   &__header
     +display(flex)
