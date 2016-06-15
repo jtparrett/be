@@ -1,5 +1,7 @@
 @mixin gradient-text($angle, $color1, $color2)
-  color: $color1
-  -webkit-text-fill-color: transparent
-  background: -webkit-linear-gradient($angle, $color1, $color2)
-  -webkit-background-clip: text
+  color: $color2
+
+  .is-webkit &
+    -webkit-text-fill-color: transparent
+    background: -webkit-linear-gradient($angle, $color1, $color2)
+    -webkit-background-clip: text

@@ -25,4 +25,8 @@ $(function() {
   }, 500);
 
   $('.banner__image, .section__image').objectFit();
+
+  if(navigator.userAgent.indexOf('Safari') > -1){
+    $('html').addClass('is-webkit');
+  }
 });
