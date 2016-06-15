@@ -27,6 +27,7 @@
 
       .button
         +linear-gradient(100deg, #5689b0, #686995)
+        margin-left: 80px
 
       .split__header
         +linear-gradient(64deg, #8be368, #adab30)
@@ -54,6 +55,7 @@
 
       .button
         +linear-gradient(101deg, #686995, #5689b0)
+        margin-right: 80px
 
       .split__header
         +linear-gradient(114deg, #adab30, #ff5b5b)
@@ -157,3 +159,17 @@
 
       &--before:before, &--after:after
         content: none
+
+  +breakpoint(large)
+    &__item
+      &--light
+        .button
+          margin-left: 80px
+          margin-right: 0
+
+  +breakpoint(small)
+    &__item
+
+      &--dark, &--light
+        .button
+          margin-left: 0px
